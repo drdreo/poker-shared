@@ -1,4 +1,3 @@
-import { SolvedHand } from '../../src/poker/game/Hand';
 
 export interface PlayerChecked {
     playerID: string;
@@ -69,7 +68,7 @@ export interface PlayerOverview {
     name: string;
     chips: number;
     color: string;
-    bet?: Bet
+    bet?: Bet;
     cards?: Card[];
     allIn: boolean;
     folded: boolean;
@@ -94,6 +93,23 @@ export interface SidePot {
 }
 
 export type PotType = 'main' | 'sidepot' | string;
+
+export interface SolvedHand {
+    // All of the cards passed into the hand.
+    cardPool: string[];
+
+    // All of the cards involved in the identified hand type.
+    cards: string[];
+
+    // Detailed description of the identified hand type (Two Pair, A's & Q's for example).
+    descr: string;
+
+    // Type of hand identified (Two Pair for example).
+    name: string;
+
+    // Ranking of the hand type (Varies from game to game; 0 being the lowest hand).
+    rank: number;
+}
 
 export interface Winner {
     id: string;
