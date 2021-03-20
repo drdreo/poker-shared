@@ -1,3 +1,4 @@
+
 export interface PlayerChecked {
     playerID: string;
 }
@@ -14,7 +15,7 @@ export interface PlayerBet {
     playerID: string;
     bet: number;
     maxBet: number;
-    type: BetType
+    type: BetType;
 }
 
 
@@ -93,13 +94,30 @@ export interface SidePot {
 
 export type PotType = 'main' | 'sidepot' | string;
 
-export interface Winner extends Pick<PlayerOverview, 'id' | 'name' | 'allIn'> {
+export interface SolvedHand {
+    // All of the cards passed into the hand.
+    cardPool: string[];
+
+    // All of the cards involved in the identified hand type.
+    cards: string[];
+
+    // Detailed description of the identified hand type (Two Pair, A's & Q's for example).
+    descr: string;
+
+    // Type of hand identified (Two Pair for example).
+    name: string;
+
+    // Ranking of the hand type (Varies from game to game; 0 being the lowest hand).
+    rank: number;
+}
+
+export interface Winner {
+    id: string;
+    name: string;
+    allIn: boolean;
     potType: PotType;
     amount: number;
-    hand?: {
-        handName: string;
-        handType: number;
-    };
+    hand?: SolvedHand;
 }
 
 export interface GamePlayersUpdate {
