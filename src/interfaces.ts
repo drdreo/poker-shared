@@ -95,6 +95,9 @@ export interface SidePot {
 export type PotType = 'main' | 'sidepot' | string;
 
 export interface SolvedHand {
+    // keep track of the player
+    playerID: string;
+
     // All of the cards passed into the hand.
     cardPool: string[];
 
