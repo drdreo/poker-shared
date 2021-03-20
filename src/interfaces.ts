@@ -67,19 +67,19 @@ export interface PlayerOverview {
     name: string;
     chips: number;
     color: string;
-    bet?: Bet
+    bet?: Bet;
     cards?: Card[];
     allIn: boolean;
     folded: boolean;
     disconnected: boolean;
 }
 
-export interface Bet{
+export interface Bet {
     amount: number;
     type: BetType;
 }
 
-export interface SidePotPlayer{
+export interface SidePotPlayer {
     id: string;
     name: string;
     color: string;
@@ -91,15 +91,15 @@ export interface SidePot {
     players: SidePotPlayer[];
 }
 
-export type PotType = "main" | "sidepot" | string;
+export type PotType = 'main' | 'sidepot' | string;
 
-export interface Winner extends Pick<PlayerOverview, 'id'| 'name' | 'allIn'> {
-    potType: PotType,
-    amount: number,
+export interface Winner extends Pick<PlayerOverview, 'id' | 'name' | 'allIn'> {
+    potType: PotType;
+    amount: number;
     hand?: {
         handName: string;
         handType: number;
-    }
+    };
 }
 
 export interface GamePlayersUpdate {
