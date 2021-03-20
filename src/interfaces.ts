@@ -1,3 +1,5 @@
+import { SolvedHand } from '../../src/poker/game/Hand';
+
 export interface PlayerChecked {
     playerID: string;
 }
@@ -14,7 +16,7 @@ export interface PlayerBet {
     playerID: string;
     bet: number;
     maxBet: number;
-    type: BetType
+    type: BetType;
 }
 
 
@@ -74,12 +76,12 @@ export interface PlayerOverview {
     disconnected: boolean;
 }
 
-export interface Bet{
+export interface Bet {
     amount: number;
     type: BetType;
 }
 
-export interface SidePotPlayer{
+export interface SidePotPlayer {
     id: string;
     name: string;
     color: string;
@@ -91,15 +93,15 @@ export interface SidePot {
     players: SidePotPlayer[];
 }
 
-export type PotType = "main" | "sidepot" | string;
+export type PotType = 'main' | 'sidepot' | string;
 
-export interface Winner extends Pick<PlayerOverview, 'id'| 'name' | 'allIn'> {
-    potType: PotType,
-    amount: number,
-    hand?: {
-        handName: string;
-        handType: number;
-    }
+export interface Winner {
+    id: string;
+    name: string;
+    allIn: boolean;
+    potType: PotType;
+    amount: number;
+    hand?: SolvedHand;
 }
 
 export interface GamePlayersUpdate {
