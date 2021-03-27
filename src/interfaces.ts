@@ -33,6 +33,7 @@ export enum BetType {
     Raise,
     Call,
     Check,
+    AllIn,
 }
 
 export interface PokerTable {
