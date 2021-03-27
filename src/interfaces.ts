@@ -74,6 +74,7 @@ export interface PlayerOverview {
     allIn: boolean;
     folded: boolean;
     disconnected: boolean;
+    afk: boolean;
 }
 
 export interface Bet {
