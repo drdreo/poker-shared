@@ -9,6 +9,7 @@ export enum PokerEvent {
     GameWinners = 'server:game:winners',
 
     PlayerLeft = 'server:player:left',
+    PlayerKick = 'server:player:kicked',
     PlayersUpdate = 'server:players_update',
 
     CurrentPlayer = 'server:game:current_player',
@@ -40,5 +41,5 @@ export enum PlayerEvent {
     JoinRoom = 'join',
     Leave = 'leave',
     StartGame = 'start_game',
-
+    VoteKick = 'vote_kick',
 }

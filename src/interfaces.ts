@@ -18,6 +18,10 @@ export interface PlayerBet {
     type: BetType;
 }
 
+export interface PlayerKicked {
+    username: string;
+}
+
 
 export enum RoundType {
     Deal = 'Deal',
