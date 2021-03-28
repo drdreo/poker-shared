@@ -1,4 +1,3 @@
-
 export interface PlayerChecked {
     playerID: string;
 }
@@ -19,7 +18,7 @@ export interface PlayerBet {
 }
 
 export interface PlayerKicked {
-    username: string;
+    kickedPlayer: string;
 }
 
 
@@ -161,4 +160,8 @@ export interface MaxBetUpdate {
 export interface Card {
     value: string | number;
     figure: string;
+}
+
+export interface PlayerKicked {
+    kickedPlayer: string;
 }
