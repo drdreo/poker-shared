@@ -52,6 +52,7 @@ export interface HomeInfo {
 export interface TableResponse {
     name: string;
     players: PlayerOverview[];
+    startTime: Date;
 }
 
 export interface ServerJoined {
@@ -78,6 +79,7 @@ export interface PlayerOverview {
     folded: boolean;
     disconnected: boolean;
     afk: boolean;
+    kickVotes: string[];
 }
 
 export interface Bet {

@@ -39,6 +39,7 @@ export enum PlayerEvent {
 
 
     JoinRoom = 'join',
+    SpectatorJoin = 'spectator:join',
     Leave = 'leave',
     StartGame = 'start_game',
     VoteKick = 'vote_kick',
