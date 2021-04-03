@@ -37,6 +37,7 @@ export enum BetType {
     Call,
     Check,
     AllIn,
+    Removed
 }
 
 export interface PokerTable {
