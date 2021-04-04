@@ -168,3 +168,26 @@ export interface Card {
 export interface PlayerKicked {
     kickedPlayer: string;
 }
+
+export interface PokerConfig {
+    spectatorsAllowed: boolean;
+    isPublic: boolean;
+    turn: {
+        time: number;
+        autoFold: boolean;
+    };
+    chips: number;
+    blinds: {
+        small: number;
+        big: number;
+        duration: number;
+    };
+    music: boolean;
+    table: {
+        autoClose: boolean;
+        rebuy: boolean;
+    };
+    players: {
+        max: number;
+    };
+}
