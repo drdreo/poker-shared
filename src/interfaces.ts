@@ -54,6 +54,7 @@ export interface TableResponse {
     name: string;
     players: PlayerOverview[];
     startTime: Date;
+    spectatorsAllowed: boolean;
 }
 
 export interface ServerJoined {
@@ -172,7 +173,7 @@ export interface PlayerKicked {
 export interface PokerConfig {
     spectatorsAllowed: boolean;
     isPublic: boolean;
-    turn: {
+    turn?: {
         time: number;
         autoFold: boolean;
     };
@@ -180,7 +181,7 @@ export interface PokerConfig {
     blinds: {
         small: number;
         big: number;
-        duration: number;
+        duration?: number;
     };
     music: boolean;
     table: {
