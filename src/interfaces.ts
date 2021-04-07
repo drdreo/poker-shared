@@ -54,7 +54,7 @@ export interface TableResponse {
     name: string;
     players: PlayerOverview[];
     startTime: Date;
-    spectatorsAllowed: boolean;
+    config: DefaultConfig;
 }
 
 export interface ServerJoined {
@@ -186,9 +186,20 @@ export interface PokerConfig {
     music: boolean;
     table: {
         autoClose: boolean;
+        autoFold: boolean;
         rebuy: boolean;
     };
     players: {
+        max: number;
+    };
+}
+
+export interface DefaultConfig extends PokerConfig {
+    afk: {
+        delay: number;
+    };
+    players: {
+        min: number;
         max: number;
     };
 }
