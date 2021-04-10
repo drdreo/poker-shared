@@ -186,7 +186,6 @@ export interface PokerConfig {
     music: boolean;
     table: {
         autoClose: boolean;
-        autoFold: boolean;
         rebuy: boolean;
     };
     players: {
