@@ -57,6 +57,13 @@ export interface TableResponse {
     config: DefaultConfig;
 }
 
+export interface AdminResponse {
+    sockets: any[];
+    tables: any[];
+    uptime: number;
+    lastPlayerAdded: Date;
+}
+
 export interface ServerJoined {
     playerID: string;
     table: string;
