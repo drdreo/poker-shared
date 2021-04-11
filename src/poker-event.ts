@@ -38,6 +38,7 @@ export enum PlayerEvent {
     Check = 'player:check',
 
 
+    RequestUpdate = 'request:update',
     JoinRoom = 'join',
     SpectatorJoin = 'spectator:join',
     Leave = 'leave',
