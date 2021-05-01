@@ -182,7 +182,6 @@ export interface PokerConfig {
     isPublic: boolean;
     turn?: {
         time: number;
-        autoFold: boolean;
     };
     chips: number;
     blinds: {
