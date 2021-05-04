@@ -44,4 +44,5 @@ export enum PlayerEvent {
     Leave = 'leave',
     StartGame = 'start_game',
     VoteKick = 'vote_kick',
+    ShowCards = 'show_cards',
 }
