@@ -84,6 +84,7 @@ export interface PlayerOverview {
     color: string;
     bet?: Bet;
     cards?: Card[];
+    showCards: boolean;
     allIn: boolean;
     folded: boolean;
     disconnected: boolean;
