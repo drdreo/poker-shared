@@ -209,3 +209,9 @@ export interface DefaultConfig extends PokerConfig {
         max: number;
     };
 }
+
+export enum GameType {
+    TexasHoldem = 'HOLDEM',
+    CoinFlip = 'COINFLIP',
+    OneCard = 'ONECARD'
+}
